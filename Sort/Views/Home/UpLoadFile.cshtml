@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "اپلود فایل ";
+}
+@model IFormFile
+
+<form asp-controller="Home" asp-action="UpLoadFile" method="post" enctype="multipart/form-data">
+
+  <div class="container">
+        <label for="file" class="form-label"> فایل dll مورد نظر را انتخاب کنید </label>
+        <input  type="file" name="file" class=" form-control" accept=".dll" />
+        <input type="submit" class=" btn btn-outline-success mt-3"/>
+        
+        <br />
+        <div class="container mt-3">
+            <p>اسم فایل های انتخابی نباید از اسمی زیر باشد</p>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">QuickSort</li>
+                <li class="list-group-item">MergeSort</li>
+                <li class="list-group-item">BubbleSort</li>
+             
+            </ul>
+        </div>
+        
+
+  </div>
+</form>
